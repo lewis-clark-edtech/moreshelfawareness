@@ -1,0 +1,37 @@
+<section data-customize-partial-type="widget" data-customize-partial-placement-context="{&quot;sidebar_id&quot;:&quot;sidebar-1&quot;,&quot;sidebar_instance_number&quot;:1}" data-customize-widget-id="recent-posts-2" id="recent-posts-2" class="widget widget-gabes-blogroll" ><span class="customize-partial-edit-shortcut customize-partial-edit-shortcut-widget-recent-posts-2">
+  <script type='text/javascript'>
+  /*
+  //code used in console of https://elink.io/p/children-s-literature-awards-96abc78 to obtain following json
+
+  let num_links = 8;
+  let k = document.querySelectorAll('a');
+  let linksArray = [];
+  for (var i = 0; i < num_links; i++)
+  {
+    let a = k[i];
+      let obj = {'link':a.href, 'title':a.title};
+      linksArray.push(obj);
+  }
+  JSON.stringify(linksArray);
+  */
+  let links_json = '[{"link":"http://www.apalaweb.org/2019-asian-pacific-american-award-for-literature-winners-selected/",  "title":"Asian/Pacific American Award for Literature"},{  "link":"https://ailanet.org/activities/american-indian-youth-literature-award/",  "title":"American Indian Youth Literature Award - American Indian Library Association"},{  "link":"http://www.ala.org/awardsgrants/stonewall-book-awards-mike-morgan-larry-romans-children%E2%80%99s-young-adult-literature-award",  "title":"Stonewall Book Awards"},{  "link":"http://www.ala.org/rt/emiert/cskbookawards",  "title":"The Coretta Scott King Book Awards"},{  "link":"https://www.education.txstate.edu/ci/riverabookaward/",  "title":"Tomás Rivera Book Award"},{  "link":"http://www.ala.org/alsc/awardsgrants/bookmedia/belpremedal",  "title":"Welcome to the Pura Belpré Award home page!"},{  "link":"http://www.ala.org/alsc/awardsgrants/bookmedia/newberymedal/newberymedal",  "title":"Welcome to the Newbery Medal Home Page!"},{  "link":"http://www.ala.org/alsc/awardsgrants/bookmedia/caldecottmedal/caldecottmedal",  "title":"Welcome to the Caldecott Medal Home Page!"}]';
+
+  window.onload = function()
+  {
+    let parent = document.getElementById('widget_links_parent');
+    let links = JSON.parse(links_json);
+    for (var i = 0; i < Object.values(links).length; i++)
+    {
+      let link = links[i];
+      let k = document.createElement('template');
+      k.innerHTML = "<li><a href=\"" + link.link + "\">" + link.title + "</a></li>";
+      parent.appendChild(k.content);
+    }
+  }
+
+  </script>
+</span>
+<h2 class="widget-title"><a href="https://elink.io/p/children-s-literature-awards-96abc78">Children's Literature Awards</a></h2>
+<ul id='widget_links_parent'>
+</ul>
+</section>
