@@ -32,12 +32,6 @@ aside
     display: block
 }
 
-.entry-title
-{
-    position: relative;
-    background-color: white;
-}
-
 /*Search results put title in header*/
 .entry-title:first-child
 {
@@ -86,10 +80,17 @@ aside figure figcaption
     grid-column: 1 / 3;
 }
 
+.entry-content
+{
+    grid-column: 2;
+    grid-row: 1;
+    height: 120px;
+    overflow: hidden;
+}
+
 .entry-content, .entry-summary
 {
     grid-column: 2;
-    overflow-y: auto;
     padding-top: 2.5em;
     padding-left: 2em;
 }
@@ -100,11 +101,13 @@ aside figure figcaption
     overflow: hidden;
 }
 
-article
+article:not(.type-page)
 {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
+    grid-auto-rows: min-content;
+    grid-row-gap: 5px;
 }
 
 
@@ -113,18 +116,41 @@ article
 
 .entry-title
 {
+    height: 1px;
+    margin: 0;
+    padding: 0;
     grid-row:1;
-    /* top: -7.55em;
-    right: -7.5em; */
     width: 300%;
-    font-size: 12pt;
+    font-size: 1.2rem;
 }
 
-.sidebar-img, .wp-post-image
+.wp-post-image
 {
-    height: 100px !important;
-    width: 100px !important;
+    height: 150px !important;
+    width: 150px !important;
+    max-width: initial;
 }
+.sidebar-img
+{
+  height: 250px !important;
+  width: 250px !important;
+}
+
+@media only screen and (max-width: 719px)
+{
+  .sidebar-img
+  {
+    height: 60vw !important;
+    width: 60vw !important;
+  }
+  .wp-post-image
+  {
+      height: 100px !important;
+      width: 100px !important;
+      max-width: initial;
+  }
+}
+
 
 .entry-header .entry-meta:nth-child(3)
 {
@@ -139,16 +165,16 @@ article
 
 .entry-header
 {
-    width: 100px !important;
+    width: 100% !important;
 }
-
-/* Small devices (landscape phones, 576px and up) */
+/*
+/* Small devices (landscape phones, 576px and up)
 @media (min-width: 576px)
 {
 
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up)
 @media (min-width: 768px)
 {
   .sidebar-img, .wp-post-image
@@ -174,7 +200,7 @@ article
   }
 }
 
-/* Large devices (desktops, 992px and up) */
+/* Large devices (desktops, 992px and up)
 @media (min-width: 992px)
 {
   .sidebar-img, .wp-post-image
@@ -202,7 +228,7 @@ article
   }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px)
 {
     .sidebar-img, .wp-post-image
@@ -217,152 +243,6 @@ article
     }
     .entry-header
     {
-        width: 250px !important;
-    }
-}
-
-
-/* OLD  */
-/* aside
-{
-    display: grid;
-    margin: 0 0 1em !important;
-}
-
-.sidebar-img
-{
-    height: 100px !important;
-    width: 100px !important;
-    object-fit: cover;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.post-thumbnail:nth-child(2)
-{
-    margin-top: -3em;
-}
-
-.widget-title
-{
-    margin-right: 11px;
-    margin-left: 11px;
-}
-.more-link
-{
-    display: block
-}
-
-.entry-title
-{
-    position: relative;
-    top: -9.55em;
-    right: -9.5em;
-    background-color: white;
-    width: 200%;
-}
-
-.entry-title:first-child/*Search results put title in header
-{
-    top: -1px !important;
-}
-
-.entry-header
-{
-    grid-column: 1;
-    margin-bottom: -3.8em;
-    width: 100% !important;
-    width: 250px !important;
-}
-
-.widget .wp-caption
-{
-    width: 100% !important;
-    margin: 0;
-    padding: 0;
-}
-
-aside figure figcaption
-{
-    font-size: 2rem !important;
-    top: -8em;
-    text-align: center;
-    color: white;
-    margin: 0 !important;
-    height: 1px; /*eh
-}
-
-
-.wp-caption-text:after
-{
- border: none !important;
-}
-
-.wp-post-image
-{
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
-}
-
-.entry-meta
-{
-    grid-column: 1 / 3;
-}
-
-.entry-header .entry-meta:nth-child(3)
-{
- width: 335%;
-}
-
-.entry-content, .entry-summary
-{
-    grid-column: 2;
-    max-height: 265px;
-    overflow-y: auto;
-    padding-top: 2.5em;
-    padding-left: 2em;
-}
-
-.entry-content p, .entry-content h
-{
-    max-height: 115px;
-    overflow: hidden;
-}
-
-article
-{
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-}
-
-
-/* Small devices (landscape phones, 576px and up)
-@media (min-width: 576px)
-{
-
-}
-
-/* Medium devices (tablets, 768px and up)
-@media (min-width: 768px)
-{
-
-}
-
-/* Large devices (desktops, 992px and up)
-@media (min-width: 992px)
-{
-
-}
-
-/* Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px)
-{
-    .sidebar-img
-    {
-        height: 250px !important;
         width: 250px !important;
     }
 } */
