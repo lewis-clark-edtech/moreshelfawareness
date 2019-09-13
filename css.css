@@ -1,4 +1,76 @@
+ul.menu.nav-menu li:nth-child(2) a/*Identity*/
+{
+  background-image: url('https://moreshelfawareness.edublogs.org/files/2019/09/Identity-1.png');
+  background-size: contain;
+}
 
+ul.menu.nav-menu li:nth-child(3) a/*Diversity*/
+{
+  background-image: url('https://moreshelfawareness.edublogs.org/files/2019/09/Diversity2-1.jpg');
+  background-size: contain;
+}
+
+ul.menu.nav-menu li:nth-child(4) a/*Justice*/
+{
+  background-image: url('https://moreshelfawareness.edublogs.org/files/2019/09/Justice-1.jpg');
+  background-size: contain;
+}
+
+ul.menu.nav-menu li:nth-child(5) a/*Action*/
+{
+  background-image: url('https://moreshelfawareness.edublogs.org/files/2019/09/action.jpg');
+  background-size: cover;
+}
+
+
+ul.nav-menu li a
+{
+  display: block;
+  height: 80px;
+  width: 80px;
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+}
+
+ul.menu.nav-menu li:first-child a
+{
+  display: inline;
+  height: auto;
+  width: auto;
+  color: inherit;
+  vertical-align: middle;
+  background-color: transparent;
+}
+
+
+.widget img
+{
+  width: 250px !important;
+  height: 250px !important;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+@media (max-width: 1150px)
+{
+  .widget img
+  {
+    width: 150px !important;
+    height: 150px !important;
+  }
+}
+
+@media (max-width: )
+{
+  .widget img
+  {
+    width: 250px !important;
+    height: 250px !important;
+  }
+}
 
 .widget_text .widget-title
 {
